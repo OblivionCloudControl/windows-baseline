@@ -123,6 +123,6 @@ control 'windows-audit-207' do
   tag cis: ['windows_2016L:17.3.1']
   ref 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark'
   describe audit_policy do
-    its('Audit PNP Activity') { should_not eq 'Success' }
+    its('Audit PNP Activity') { should eq 'Success' }
   end
 end
