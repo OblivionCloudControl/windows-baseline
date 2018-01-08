@@ -116,13 +116,13 @@ end
 
 control 'windows-audit-207' do
   impact 1.0
-  title 'Ensure "Audit PNP Activity" is set to "Success"'
+  title 'Plug and Play Events'
   desc '
     policy_path: Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Detailed Tracking
   '
   tag cis: ['windows_2016L:17.3.1']
   ref 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark'
   describe audit_policy do
-    its('Audit PNP Activity') { should eq 'Success' }
+    its('Plug and Play events') { should eq 'Success' }
   end
 end
